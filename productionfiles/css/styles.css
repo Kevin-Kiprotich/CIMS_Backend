@@ -1,0 +1,44 @@
+body {
+  margin: 0 !important;
+  height: fit-content;
+  background: #9fb4c7;
+}
+
+header {
+  height: 7vh;
+  width:100vw;
+  background:#d9d9d9;
+  margin: 0 !important;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content:center;
+  align-items:center;
+  margin-bottom:0.5vh;
+}
+
+header h1 {
+  font-size: 18px;
+  font-family: "montserrat";
+  font-weight: bold;
+  margin:0 0 0 30px;
+}
+
+.himgs {
+  height: 100%;
+  width:30%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-content: center;
+  align-items: center;
+}
+
+.himgs img {
+  height: 98%;
+  width: auto;
+}
+
+nav{
+    
+}
