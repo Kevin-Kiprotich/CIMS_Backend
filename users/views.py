@@ -12,6 +12,7 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 from django.conf import settings
 from rest_framework_simplejwt.tokens import RefreshToken
+from django.contrib.auth import login
 from .models import AppUser,ReportedCrimes
 
 User=get_user_model()
@@ -26,6 +27,7 @@ class LoginView(APIView):
         try:
             user = AppUser.objects.get(email=email)
             if user.check_password(password):
+                login(user)
                 # serializer = UserSerializer(user)
                 refresh=RefreshToken.for_user(user)
                 # access_token=str(refresh.access_token)
