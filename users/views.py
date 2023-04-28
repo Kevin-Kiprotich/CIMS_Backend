@@ -27,7 +27,7 @@ class LoginView(APIView):
         try:
             user = AppUser.objects.get(email=email)
             if user.check_password(password):
-                login(user)
+                # login(user)
                 # serializer = UserSerializer(user)
                 refresh=RefreshToken.for_user(user)
                 # access_token=str(refresh.access_token)
