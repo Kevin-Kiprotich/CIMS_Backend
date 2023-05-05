@@ -13,13 +13,20 @@ from rest_framework.response import Response
 from django.conf import settings
 from rest_framework_simplejwt.tokens import RefreshToken
 from django.contrib.auth import login
+import os
 from .models import AppUser,ReportedCrimes
 
 User=get_user_model()
 def Homepage(request):
     template=loader.get_template('index.html')
     return HttpResponse(template.render())
-
+class sendCrimeMediaInfo(APIView):
+    def get(self,request):
+        img_path=request.data.get("img_path")
+        aud_path=request.data.get("aud_path")
+        image_path=os.path.join(settings.MEDIA_ROOT,img_path)
+        if os.path.exists(path):
+            image_url=request.buld_absolute_uri(img_path)
 class LoginView(APIView):
     def post(self, request):
         email = request.data.get('email')
