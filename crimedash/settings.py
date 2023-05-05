@@ -158,5 +158,5 @@ REST_FRAMEWORK = {
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
-GDAL_LIBRARY_PATH=r"C:/Program Files/PostgreSQL/15/bin/libgdal-30.dll"
-GEOS_LIBRARY_PATH = r"C:/Program Files/PostgreSQL/15/bin/libgeos_c.dll"
+# GDAL_LIBRARY_PATH=r"C:/Program Files/PostgreSQL/15/bin/libgdal-30.dll"
+# GEOS_LIBRARY_PATH = r"C:/Program Files/PostgreSQL/15/bin/libgeos_c.dll"
